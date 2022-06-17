@@ -1,8 +1,10 @@
 import useHome from "./home";
+import useMap from "./map";
 
 const useControllersView = () => {
     return {
-        useHome
+        useHome,
+        useMap,
     }
 }
 

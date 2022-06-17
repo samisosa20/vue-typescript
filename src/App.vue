@@ -1,5 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" />
-  <router-view></router-view>
+  <component :is="layout">
+    <router-view />
+  </component>
 </template>
 
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  computed: {
+    layout() {
+      return this.$route.meta.layout || 'LayoutDefault';
+    },
+  },
+});
+</script>

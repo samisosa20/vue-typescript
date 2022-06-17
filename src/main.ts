@@ -1,6 +1,18 @@
-import { createApp } from 'vue'
-import './styles/index.css'
-import App from './App.vue'
-import router from './routes'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./routes";
 
-createApp(App).use(router).mount('#app')
+// Styles
+import "./styles/index.css";
+import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
+
+// Layouts
+import useLayout from "@/screens/layouts";
+
+const { LayoutDefault, LayoutMap } = useLayout();
+
+createApp(App)
+  .use(router)
+  .component("LayoutDefault", LayoutDefault)
+  .component("LayoutMap", LayoutMap)
+  .mount("#app");
