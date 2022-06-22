@@ -1,11 +1,13 @@
 <template>
   <header class="h-14 py-2 px-6 w-full border-b border-gray-300">
     <div class="h-10 w-10">
-      <img
-        alt="Logo"
-        src="https://www.citypng.com/public/uploads/preview/-316008155470z0f6if4ay.png"
-        class="w-full"
-      >
+      <router-link to="/">
+        <img
+          alt="Logo"
+          src="https://www.citypng.com/public/uploads/preview/-316008155470z0f6if4ay.png"
+          class="w-full"
+        >
+      </router-link>
     </div>
   </header>
   <div class="relative shadow min-h-body">
